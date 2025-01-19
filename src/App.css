@@ -1,0 +1,29 @@
+.map-container {
+  position: relative;
+  z-index: 1; /* Ensure map stays behind the modal */
+}
+
+.ReactModal__Overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Dim background */
+  z-index: 1000; /* Modal overlay above the map */
+}
+
+.ReactModal__Content {
+  position: relative;
+  z-index: 1010; /* Modal content above the overlay */
+  margin: auto;
+  width: 50%;
+  height: 50%;
+  border-radius: 10px;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
