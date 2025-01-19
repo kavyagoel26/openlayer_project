@@ -1,15 +1,14 @@
 import { useState } from "react";
 
-const WaypointDropdown = ({ index, onInsertBefore, onInsertAfter }) => {
-    
+const WaypointDropdown = ({ onInsertBefore, onInsertAfter }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const handleOptionClick = (option) => {
-    setIsOpen(false); // Close dropdown
+    setIsOpen(false);
     if (option === "before") {
-      onInsertBefore(index);
+      onInsertBefore();
     } else if (option === "after") {
-      onInsertAfter(index);
+      onInsertAfter();
     }
   };
 
